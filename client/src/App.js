@@ -190,12 +190,12 @@ class App extends Component {
                       return (
                         <tr key={note._id}>
                           <td>{note.al_nombre}</td>
-                          <td>{note.b1.substring(0,11)}</td>
-                          <td>{note.b2.substring(0,11)}</td>
-                          <td>{note.c1.substring(0,11)}</td>
-                          <td>{note.b3.substring(0,11)}</td>
-                          <td>{note.b4.substring(0,11)}</td>
-                          <td>{note.c2.substring(0,11)}</td>
+                          <td>{note.b1.substring(0,2)}</td>
+                          <td>{note.b2.substring(0,2)}</td>
+                          <td>{note.c1.substring(0,2)}</td>
+                          <td>{note.b3.substring(0,2)}</td>
+                          <td>{note.b4.substring(0,2)}</td>
+                          <td>{note.c2.substring(0,2)}</td>
                           <td>
                             <button onClick={() => this.deleteNote(note._id)} className="btn red darken-4">
                               <i className="material-icons">delete</i>
