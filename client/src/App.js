@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 
 class App extends Component {
@@ -131,8 +132,8 @@ class App extends Component {
         <nav className="red darken-4">
           <div className="container">
             <div className="nav-wrapper">
-
-              <a href="#"  className="brand-logo">ETN 35</a>
+              <Link to="/login">Login</Link>
+              <a href="/"  className="brand-logo">ETN 35</a>
             </div>
           </div>
         </nav>
