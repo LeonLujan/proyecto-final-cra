@@ -76,7 +76,7 @@ class App extends Component {
   }
 
   deleteNote(id) {
-    // if (confirm('Estas seguro de que desea eliminar este campo?')) {
+    //if(confirm('Estas seguro de que desea eliminar este campo?')) {
       fetch(`/api/notes/${id}`, {
         method: 'DELETE',
         headers: {
@@ -130,13 +130,11 @@ class App extends Component {
       <div>
         {/* NAVIGATION */}
         <nav className="red darken-4">
-          <div className="container">
             <div className="nav-wrapper">
-              <Link to="/login">Login</Link>
-              <a href="/"  className="brand-logo">ETN 35</a>
+              <Link to="/login" className="left"> Login</Link>
+              <a href="/"  className="brand-logo center">ETN 35</a>
             </div>
-          </div>
-        </nav>
+          </nav>
 
         <div className="container">
           <div className="row">
@@ -180,7 +178,7 @@ class App extends Component {
                     <th>b2</th>
                     <th>c1</th>
                     <th>b3</th>
-                    <th>b3</th>
+                    <th>b4</th>
                     <th>c2</th>
                   </tr>
                 </thead>
@@ -190,6 +188,7 @@ class App extends Component {
                       return (
                         <tr key={note._id}>
                           <td>{note.al_nombre}</td>
+                          <td>{note.al_curso}</td>
                           <td>{note.b1.substring(0,2)}</td>
                           <td>{note.b2.substring(0,2)}</td>
                           <td>{note.c1.substring(0,2)}</td>
@@ -197,10 +196,10 @@ class App extends Component {
                           <td>{note.b4.substring(0,2)}</td>
                           <td>{note.c2.substring(0,2)}</td>
                           <td>
-                            <button onClick={() => this.deleteNote(note._id)} className="btn red darken-4">
+                            <button onClick={() => this.deleteNote(note._id)} className="btn red darken-4 right">
                               <i className="material-icons">delete</i>
                             </button>
-                            <button onClick={() => this.editNote(note._id)} className="btn red darken-4" style={{margin: '4px'}}>
+                            <button onClick={() => this.editNote(note._id)} className="btn red darken-4 right" style={{margin: '4px'}}>
                               <i className="material-icons">edit</i>
                             </button>
                           </td>
